@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="contact" id="contact">
+    <div class="contact-box">
+        <h4>Contactez-moi !</h4>
+        <h4>
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </h4>
+        <form id="login-form" method="POST" action="{% url 'submit_mail' %}">
+            {% csrf_token %}
+            <div class="identity">
+                <div class="input-box">
+                    <label class="label" for="nom"></label>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="input-box">
+                    <label class="label" for="email"></label>
+                    <input type="text" name="email" id="email" placeholder="Votre email" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label class="label" for="sujet"></label>
+                <input type="text" name="sujet" id="sujet" placeholder="Sujet du message">
+            </div>
+            <div class="input-box">
+                <label class="label" for="message"></label>
+                <textarea cols="40" rows="10" name="message" id="message" placeholder="Ecrivez votre message ici..."></textarea>
+            </div>
+            <div class="button">
+                <input class="button-input" type="submit" id="submit" name="submit" value="Envoyer">
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+

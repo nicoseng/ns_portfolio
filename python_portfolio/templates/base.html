@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!-- box icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <!--header design -->
+    <header class="header">
+        <a href="{% url 'home' %}" class="logo">Sengmany Nicolas</a>
+        
+        
+        <nav class="navbar">
+            <ul class="navigation">
+                <li>                
+                    <a href="{% url 'home' %}">Accueil</a>
+                </li>
+                <li>                
+                    <a href="{% url 'about' %}">Qui suis-je ?</a>
+                </li>
+                <li>                
+                    <a href="{% url 'education' %}">Éducation</a>
+                </li>
+                <li>                
+                    <a href="{% url 'competences' %}">Compétences</a>
+                </li>
+                <li>                
+                    <a href="{% url 'projets' %}">Projets</a>
+                </li>
+                <li>                
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+            <ion-icon name="menu" class="menu-btn"></ion-icon>
+            <ion-icon name="close-circle" class="close-btn"></ion-icon>
+        </nav>
+    </header>
+
+{% block content %}
+{% endblock %}
+    <!-- Footer design -->
+    <!-- <footer class="footer">
+        <p>Copyright &copy; 2023 by Sengmany Nicolas | All rights Reserved.</p>
+    </footer> -->
+    <script>
+    const menuBtn = document.querySelector(".menu-btn")
+    const navigation = document.querySelector(".navigation")
+    const closeBtn = document.querySelector(".close-btn")
+    const subMenuBox = document.querySelector(".sub-menu")
+
+    menuBtn.addEventListener('click',()=>{
+    navigation.classList.toggle('mobile-menu')
+    menuBtn.classList.toggle('deactive')
+    closeBtn.classList.toggle('active')
+    
+    })
+
+    closeBtn.addEventListener('click',()=>{
+    navigation.classList.remove('mobile-menu')
+    menuBtn.classList.toggle('deactive')
+    closeBtn.classList.remove('active')
+
+    })
+
+    function toggleSubMenu(){
+        subMenuBox.classList.toggle('open-menu')
+    }
+
+</script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

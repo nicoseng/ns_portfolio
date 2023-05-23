@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="home" id="home">
+    <div class="home-content">
+        <h4 class="bonjour">Bonjour !</h4>
+        <h3>Sengmany Nicolas</h3>
+        <h2>Développeur web <span> Python/Django</span></h2>
+        <!-- <p>Organisé, pédagogue, esprit d'équipe, curieux, avide d'apprendre car passionné avant tout !</p> -->
+        <ul>
+            <li>
+                <ion-icon name="mail"></ion-icon>
+                nicolas.sengmany@gmail.com
+            </li>
+            <li>
+                <ion-icon name="call"></ion-icon>
+                06 15 66 71 69
+            </li>
+            <li>
+                <ion-icon name="location"></ion-icon>
+                77185 Lognes
+            </li>
+            <li>
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <a href= "https://www.linkedin.com/in/nicolas-s-0a3a139b/" target="_blank">Mon profil Linkedin</a>
+            </li>
+            <li>
+                <ion-icon name="logo-github"></ion-icon>
+                <a href= "https://github.com/nicoseng?tab=repositories" target="_blank">Mon GitHub</a>
+            </li>
+        </ul>
+        <a href="{% static 'cv-sn-23.pdf' %}" download class='cv-btn'>Télécharger mon CV</a>
+    </div>
+    <div class="home-img">
+        <img src="{% static 'images/photo.png' %}">
+    </div>
+</section>
+
+{% endblock %}
+
+

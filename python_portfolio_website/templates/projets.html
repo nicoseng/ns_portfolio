@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="projets" id="projets">
+    <div class="projets-content">
+        <h3 class="heading">Mes derniers projets *</h3>
+        <h6 class="heading" id="note"> * Note : Ce site portfolio est lui-même codé en Python et Django</h6>
+        <div class="projets-container">
+            <div class="projets-box">
+                <img class="chinese_folktales" src="{% static 'images/chinese_folktales.png'%}" alt="">
+                <div class="projets-layer">
+                    <h4>Chinese Folktales</h4>
+                    <p>Un site web pour apprendre le mandarin pour les enfants. Codé en Python et Django</p>
+                    <a href="https://chinese-folktales.com/" class='projet-btn' target="_blank">Lien URL</a>
+                </div>
+            </div>
+            <div class="projets-box">
+                <img src="{% static 'images/ocean.png'%}" alt="ocean">
+                <div class="projets-layer">
+                    <h4>Bubble Blaster</h4>
+                    <p>Jeu vidéo où il faut attraper un maximum de bulles ! Codé en Python et Pygame</p>
+                    
+                    <a href="https://github.com/nicoseng/bubble_blaster" class='projet-btn' target="_blank">En savoir plus</a>
+                </div>
+            </div>
+            <div class="projets-box">
+                <img src="{% static 'images/jeu_labyrinthe.png'%}" alt="labyrinthe">
+                <div class="projets-layer">
+                    <h4>Jeu de McGyver</h4>
+                    <p>Jeu python où il faut récupérer des objets afin de pouvoir s'échapper du labyrinthe. </p>
+                    <a href="https://github.com/nicoseng/P3-McGyver" class='projet-btn' target="_blank">En savoir plus</a>
+                </div>
+            </div>
+            <div class="projets-box">
+                <img src="{% static 'images/weather.png'%}" alt="weather">
+                <div class="projets-layer">
+                    <h4>Weather App</h4>
+                    <p>Besoin de vérfier la météo n'importe où dans le monde ? Codé en Python et Flask</p>
+                    <a href="https://github.com/nicoseng/weather_app" class='projet-btn' target="_blank">En savoir plus</a>
+                </div>
+            </div>
+            <div class="projets-box">
+                <img src="{% static 'images/code.png'%}" alt="vigenere">
+                <div class="projets-layer">
+                    <h4>Chiffrement de Vigenère</h4>
+                    <p> Projet en Python pour initier les élèves à la cryptographie en Python.</p>
+                    <a href="https://github.com/nicoseng/vigenere" class='projet-btn' target="_blank">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="projets-box">
+                <img src="{% static 'images/casino.jpg'%}" alt="casino">
+                <div class="projets-layer">
+                    <h4>Jeu de casino</h4>
+                    <p>Jeu de roulette comme au casino. Codé en Python </p>
+                    <a href="https://github.com/nicoseng/casino" class='projet-btn' target="_blank">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+</section>
+
+{% endblock %}
+
+

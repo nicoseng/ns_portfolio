@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="about" id="about">
+    <div class="about-content">
+        <h3>Qui suis-je ?</h3>
+        <p>Il était une fois un petit garçon passionné par les langues et le langage.<br> 
+        <p>À travers ses études littéraires puis ses expériences professionnelles dans l'enseignement et l'industrie ferroviaire, 
+        ce petit garçon devenu adulte découvrait le langage des ordinateurs et la programmation Python en travaillant avec ceux dont c'était le métier.<br></p>
+        <p>Son esprit se mit alors en ébulition : il découvrit le monde de l'informatique et décida alors de se reconvertir dans ce domaine, avec pour préférence les domaines de l'éducation et le E-Learning.<br></p>
+        <p>Avide de curiosité, ce garçon n'était cependant pas du tout fermé à d'autres domaines car son envie d'apprendre restait insatiable.<br></p>
+        <p>Depuis, il ne cesse de se perfectionner dans ce langage à travers des projets personels car il souhaite toujours s'améliorer. En effet pour lui, le code est comme le forgeron qui travaille son matériau : C'est en forgeant qu'on devient forgeron.<br></p>
+        <p>À travers ce mini site web de présentation, il souhaite ainsi montrer sa passion réelle pour le Python et attirer par la même occasion les yeux de recruteurs bienveillants.<br></p>
+        <a href="{% url 'education'  %}" class='cv-btn'>En savoir plus sur mon parcours</a>
+    </div>
+    <div class="about-img">
+        <img src="{% static 'images/photo.png' %}">
+    </div>
+</section>
+
+{% endblock %}
+
+
