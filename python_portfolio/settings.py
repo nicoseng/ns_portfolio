@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "165.232.100.227", "nicolas-sengmany.com"]
+ALLOWED_HOSTS = ["127.0.0.1", config('ADDRESS_IP'), "nicolas-sengmany.com"]
 
 CSRF_TRUSTED_ORIGINS = ["http://nicolas-sengmany.com", "https://nicolas-sengmany.com"]
 
@@ -152,11 +152,12 @@ MEDIA_URL = '/images/'
 
 
 if os.environ.get("ENV", "development") == "production":
-    STATIC_URL = '/static/'
+    
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 else:
     STATIC_URL = 'static/'
-
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # Default primary key field type
